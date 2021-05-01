@@ -1,32 +1,34 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div>
+        <Nav></Nav>
+
+        <full-page ref="fullpage" :options="fullpageOptions" id="fullpage">
+            <div class="section">First section ...</div>
+            <div class="section">Second section ...</div>
+            <div class="section">Second section ...</div>
+            <div class="section">Second section ...</div>
+        </full-page>
     </div>
-    <router-view/>
-  </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import Nav from "./components/Nav.vue";
 
-#nav {
-  padding: 30px;
+export default {
+    components: {
+        Nav,
+    },
+    data: () => ({
+        fullpageOptions: {
+            licenseKey: "YOUR_KEY_HEERE",
+            menu: '#menu',
+            navigation: true,
+            anchors: ["page1", "page2", "page3", "page4"],
+            sectionsColor: ["#41b883", "#ff5f45", "#0798ec", "#41b883"],
+        },
+    }),
+};
+</script>
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+<style lang="scss" scoped>
 </style>
