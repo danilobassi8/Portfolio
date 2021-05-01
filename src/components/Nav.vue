@@ -9,17 +9,17 @@
             v-model="active"
         >
             <template #left> logo </template>
-            <vs-navbar-item :active="active == 'guide'" id="guide">
-                Guide
+            <vs-navbar-item :active="active == 'home'" id="guide">
+                Home
             </vs-navbar-item>
-            <vs-navbar-item :active="active == 'docs'" id="docs">
-                Documents
+            <vs-navbar-item :active="active == 'about'" id="docs">
+                About Me
             </vs-navbar-item>
-            <vs-navbar-item :active="active == 'components'" id="components">
-                Components
+            <vs-navbar-item :active="active == 'experience'" id="components">
+                Experience
             </vs-navbar-item>
-            <vs-navbar-item :active="active == 'license'" id="license">
-                license
+            <vs-navbar-item :active="active == 'idk'" id="license">
+                idk
             </vs-navbar-item>
             <template #right>
                 <vs-switch v-model="lenguage" @click="toggleLanguage">
@@ -33,12 +33,8 @@
                     </template>
                 </vs-switch>
 
-                 <vs-button flat >
-                Contact Me!
-            </vs-button>
+                <vs-button flat> Contact Me! </vs-button>
             </template>
-
-           
         </vs-navbar>
     </div>
 </template>
