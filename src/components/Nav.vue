@@ -9,18 +9,14 @@
             v-model="active"
         >
             <template #left> logo </template>
-            <vs-navbar-item :active="active == 'home'" id="guide">
-                Home
-            </vs-navbar-item>
-            <vs-navbar-item :active="active == 'about'" id="docs">
+            <vs-navbar-item :active="active == 'home'" target="_self" href="#home"> Home </vs-navbar-item>
+            <vs-navbar-item :active="active == 'about'" target="_self" href="#about">
                 About Me
             </vs-navbar-item>
-            <vs-navbar-item :active="active == 'experience'" id="components">
+            <vs-navbar-item :active="active == 'experience'" target="_self" href="#experience">
                 Experience
             </vs-navbar-item>
-            <vs-navbar-item :active="active == 'idk'" id="license">
-                idk
-            </vs-navbar-item>
+            <vs-navbar-item :active="active == 'idk'" target="_self" href="#idk"> idk </vs-navbar-item>
             <template #right>
                 <vs-switch v-model="lenguage" @click="toggleLanguage">
                     <template #off>
@@ -44,12 +40,11 @@
   <script>
 export default {
     data: () => ({
-        active: "guide",
+        active: "home",
         lenguage: false,
     }),
     methods: {
         toggleLanguage() {
-            console.log(this.lenguage);
         },
     },
 };
