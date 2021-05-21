@@ -1,22 +1,25 @@
 <template>
-    <div>
+    <div class="main-app">
         <Nav></Nav>
-        <Home></Home>
+        <!-- <Home/> -->
+        <MorphBackground class="svg-morph-background" />
     </div>
 </template>
 
 <script>
 import Nav from "./components/Nav.vue";
-import Home from "./views/Home.vue"
+import MorphBackground from "./components/MorphBackground";
+// import Home from "./views/Home.vue"
 
 export default {
-    name: 'App',
+    name: "App",
     components: {
         Nav,
-        Home,
+        MorphBackground,
     },
 };
 </script>
 
 <style lang="scss" scoped>
+
 </style>

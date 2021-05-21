@@ -10,12 +10,17 @@ import "vuesax/dist/vuesax.css";
 Vue.use(Vuesax, {});
 
 // Fullpage
-
 import VueFullPage from "vue-fullpage.js";
 Vue.use(VueFullPage);
 
-Vue.config.productionTip = false;
+// Anime.js
+import VueAnime from "vue-animejs";
+Vue.use(VueAnime);
 
+// Global css
+import "./assets/css/main.scss";
+
+Vue.config.productionTip = false;
 new Vue({
    router,
    store,
