@@ -2,12 +2,13 @@
     <div>
         <svg class="svg" viewBox="0 0 800 600" preserveAspectRatio="none">
             <polygon
-        
+                class="polygon"
                 ref="svgmorph"
                 stroke="none"
-                fill="red"
+                fill="#24252a"
                 points="0 0 , 800 0 , 800 250 , 800 600 , 0 600 , 0 250 , 0 150 0 0"
             ></polygon>
+            <slot></slot>
         </svg>
     </div>
 </template>
@@ -40,6 +41,5 @@ export default {
 <style scoped>
 .svg {
     width: 100%;
-    background-color: rgb(203, 148, 255);
 }
 </style>

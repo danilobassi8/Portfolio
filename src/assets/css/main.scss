@@ -13,6 +13,14 @@ svg,
 
 .svg-morph-background {
    height: 100%;
+   width: 100%;
    margin: 0px;
-   z-index: -100;
+
+   position: fixed;
+   z-index: 1;
+}
+
+.section{
+    
+    z-index: 5;
 }

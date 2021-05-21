@@ -1,10 +1,17 @@
 <template>
-    <full-page ref="fullpage" :options="fullpageOptions" id="fullpage">
-        <div class="section">First section ...</div>
-        <div class="section">Second section ...</div>
-        <div class="section">Second section ...</div>
-        <div class="section">Second section ...</div>
-    </full-page>
+    <div class="home-full-page">
+        <full-page ref="fullpage" :options="fullpageOptions" id="fullpage">
+            <div class="section">
+                <div class="text">
+                    First section hoal soy un texto re largo quiero ver cuando
+                    se pase al frente este div
+                </div>
+            </div>
+            <div class="section">Second section ...</div>
+            <div class="section">Second section ...</div>
+            <div class="section">Second section ...</div>
+        </full-page>
+    </div>
 </template>
 
 <script>
@@ -24,3 +31,9 @@ export default {
     }),
 };
 </script>
+<style scoped>
+.text {
+    z-index: 600;
+    color: rgb(221, 44, 44);
+}
+</style>
