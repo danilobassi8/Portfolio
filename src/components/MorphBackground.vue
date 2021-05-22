@@ -2,7 +2,7 @@
     <div>
         <svg class="svg" viewBox="0 0 800 600" preserveAspectRatio="none">
             <polygon
-                class="polygon"
+                id="#polygon"
                 ref="svgmorph"
                 stroke="none"
                 fill="#24252a"

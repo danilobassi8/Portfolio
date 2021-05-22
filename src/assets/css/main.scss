@@ -16,11 +16,10 @@ svg,
    width: 100%;
    margin: 0px;
 
-   position: fixed;
-   z-index: 1;
+   position: absolute;
+
 }
 
 .section{
-    
-    z-index: 5;
+    color: rgb(77, 155, 25);
 }

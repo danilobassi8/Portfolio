@@ -1,8 +1,8 @@
 <template>
     <div class="main-app">
-        <Nav/>
-        <MorphBackground class="svg-morph-background" />
+        <Nav> </Nav>
 
+        <MorphBackground class="svg-morph-background" />
         <Home />
     </div>
 </template>
