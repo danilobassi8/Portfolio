@@ -9,14 +9,34 @@
             v-model="active"
         >
             <template #left> logo </template>
-            <vs-navbar-item :active="active == 'home'" target="_self" href="#home"> Home </vs-navbar-item>
-            <vs-navbar-item :active="active == 'about'" target="_self" href="#about">
+            <vs-navbar-item
+                :active="actualIndex == 'home'"
+                target="_self"
+                href="#home"
+            >
+                Home
+            </vs-navbar-item>
+            <vs-navbar-item
+                :active="actualIndex == 'about'"
+                target="_self"
+                href="#about"
+            >
                 About Me
             </vs-navbar-item>
-            <vs-navbar-item :active="active == 'experience'" target="_self" href="#experience">
+            <vs-navbar-item
+                :active="actualIndex == 'experience'"
+                target="_self"
+                href="#experience"
+            >
                 Experience
             </vs-navbar-item>
-            <vs-navbar-item :active="active == 'idk'" target="_self" href="#idk"> idk </vs-navbar-item>
+            <vs-navbar-item
+                :active="actualIndex == 'idk'"
+                target="_self"
+                href="#idk"
+            >
+                idk
+            </vs-navbar-item>
             <template #right>
                 <vs-switch v-model="lenguage" @click="toggleLanguage">
                     <template #off>
@@ -33,20 +53,27 @@
             </template>
         </vs-navbar>
     </div>
-   
 </template>
 
 
 
   <script>
+import { mapState } from "vuex";
 export default {
     data: () => ({
-        active: "home",
         lenguage: false,
+        active: false,
     }),
     methods: {
-        toggleLanguage() {
-        },
+        toggleLanguage() {},
+        
+    },
+
+    computed: {
+        ...mapState({
+            actualIndex: "navIndexSelected",
+        }),
+
     },
 };
 </script>

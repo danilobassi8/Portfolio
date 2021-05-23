@@ -42,25 +42,28 @@
 export default {
     name: "Home",
     components: {},
-    data: () => ({
-        fullpageOptions: {
-            licenseKey: "YOUR_KEY_HEERE",
-            paddingTop: "90px",
-            menu: "menu",
-            navigation: true,
-            anchors: ["home", "about", "experience", "idk"],
+    data: function () {
+        return {
+            fullpageOptions: {
+                licenseKey: "YOUR_KEY_HEERE",
+                paddingTop: "90px",
+                menu: "menu",
+                navigation: true,
+                anchors: ["home", "about", "experience", "idk"],
 
-            onLeave: (origin, destination) =>
-                console.log("origin", origin, "destination", destination),
+                onLeave: this.onLeave,
 
-            // sectionsColor: ["#41b883", "#ff5f45", "#0798ec", "#41b883"],
-        },
-    }),
+                // sectionsColor: ["#41b883", "#ff5f45", "#0798ec", "#41b883"],
+            },
+        };
+    },
     methods: {
-        onLeave(origin = 1, destination = 1, direction = 1) {
-            console.log("leaving...", origin, destination, direction);
-
-            return false;
+        onLeave(origin, destination, direction) {
+            this.$store.commit("changeNavigation", {
+                destination: destination.anchor,
+                direction,
+            });
+            return true;
         },
     },
 };

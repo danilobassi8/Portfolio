@@ -1,3 +1,11 @@
+// Para que los circulitos de full-page cambien de color
+#fp-nav ul li a span {
+   background: #bdbdbe;
+}
+#fp-nav ul li .active span {
+   background: white;
+}
+
 .container {
    margin-top: 90px;
    text-align: center;
@@ -15,11 +23,5 @@ svg,
    height: 100%;
    width: 100%;
    margin: 0px;
-
    position: absolute;
-
-}
-
-.section{
-    color: rgb(77, 155, 25);
 }
