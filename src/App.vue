@@ -1,10 +1,11 @@
 <template>
-    <div class="main-app">
-        <Nav> </Nav>
+   <div class="main-app">
 
-        <MorphBackground class="svg-morph-background" />
-        <Home />
-    </div>
+      <Nav> </Nav>
+        
+      <MorphBackground class="svg-morph-background" />
+      <Home />
+   </div>
 </template>
 
 <script>
@@ -13,14 +14,13 @@ import MorphBackground from "./components/MorphBackground";
 import Home from "./views/Home.vue";
 
 export default {
-    name: "App",
-    components: {
-        Nav,
-        MorphBackground,
-        Home,
-    },
+   name: "App",
+   components: {
+      Nav,
+      MorphBackground,
+      Home,
+   },
 };
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
