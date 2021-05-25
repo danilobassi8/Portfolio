@@ -22,7 +22,8 @@ export default {
             { value: "M-1 19.5909V0H1920V7V19.5909H1355H574.449H-1Z" },
             { value: "M-61 113V0H1943V587.768V1081C1907.5 1081 1514 1107.27 1085 587.768C826.914 275.238 628 113 223 113H-61Z" },
          ],
-         easing: 'spring(1, 80, 10, 0)',
+         //easing: 'spring(1, 80, 10, 0)',
+         easing: 'easeOutElastic(1, .6)',
          
          duration: 2000,
          loop: false,
