@@ -49,7 +49,7 @@
                     </template>
                 </vs-switch>
 
-                <vs-button flat> Contact Me! </vs-button>
+                
             </template>
         </vs-navbar>
     </div>
