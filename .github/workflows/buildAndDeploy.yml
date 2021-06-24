@@ -1,24 +1,14 @@
-name: Auto Deploy
-on:
-  push:
-    branches: [master]
+name: Build Vue
+on: [push]
 jobs:
-  build-and-test:
+  build_vue:
     runs-on: ubuntu-latest
+    name: Build Vue
     steps:
-      - uses: actions/checkout@v2       # setup the repository in the runner
-      - name: Setup Node.js             # setup Node.js in the runner
-        uses: actions/setup-node@v1
-        with:
-          node-version: '12'
-      - uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: ${{ runner.os }}-node-
-      - run: npm ci 
-      - run: npm run build
-      - run: cd dist
-      - run: git init ; git add -A ; git commit -m "New GitHub pages deployment"
-      - run: git push git@github.com:danilobassi8/Portfolio.git master:gh-pages
-      - run: echo "Successfully deployed to GH pages"
+    - uses: actions/checkout@v2
+    - id: Build-Vue
+      uses: xRealNeon/VuePagesAction@1.0.0
+      with:
+        username: 'danilobassi8'
+        reponame: 'Portfolio'
+        token: ${{ secrets.GITHUB_TOKEN }}
