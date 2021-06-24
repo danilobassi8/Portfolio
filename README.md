@@ -1,5 +1,8 @@
 # portfolio
 
+## Auto deployment
+This project is builded with vue and auto-deploys on GitHub pages when a new commit is pushed to master. You can check the last version deployed on this link: 
+
 ## Project setup
 ```
 npm install
@@ -22,3 +25,4 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
