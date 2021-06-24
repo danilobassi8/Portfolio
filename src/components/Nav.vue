@@ -5,37 +5,38 @@
             color="#24252a"
             text-white
             square
-            center-collapsed
+            right-collapsed
+           
             v-model="active"
         >
-            <template #left> logo </template>
+            <template #left> <div class="logo">Logo</div> </template>
             <vs-navbar-item
                 :active="actualIndex == 'home'"
                 target="_self"
                 href="#home"
             >
-                Home
+                 <span class="nav-link">Home </span>
             </vs-navbar-item>
             <vs-navbar-item
                 :active="actualIndex == 'about'"
                 target="_self"
                 href="#about"
             >
-                About Me
+                <span class="nav-link">About Me</span> 
             </vs-navbar-item>
             <vs-navbar-item
                 :active="actualIndex == 'experience'"
                 target="_self"
                 href="#experience"
             >
-                Experience
+                 <span class="nav-link">Experience </span>
             </vs-navbar-item>
             <vs-navbar-item
-                :active="actualIndex == 'idk'"
+                :active="actualIndex == 'contact'"
                 target="_self"
-                href="#idk"
+                href="#contact"
             >
-                idk
+                <span class="nav-link">Contact </span>
             </vs-navbar-item>
             <template #right>
                 <vs-switch v-model="lenguage" @click="toggleLanguage">
@@ -48,8 +49,6 @@
                         ESP
                     </template>
                 </vs-switch>
-
-                
             </template>
         </vs-navbar>
     </div>
@@ -92,4 +91,18 @@ export default {
         color: #0099ff;
     }
 }
+@media (max-width: 400px) {
+	.logo{
+        display: none;
+        background-color: red !important;
+    }
+    .nav-link{
+        font-size: 11px;
+    }
+    .my-nav {
+    min-height: 40px;
+    line-height: 40px;
+    }
+}
+
 </style>

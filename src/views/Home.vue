@@ -49,7 +49,7 @@ export default {
                 paddingTop: "90px",
                 menu: "menu",
                 navigation: true,
-                anchors: ["home", "about", "experience", "idk"],
+                anchors: ["home", "about", "experience", "contact"],
 
                 onLeave: this.onLeave,
 
